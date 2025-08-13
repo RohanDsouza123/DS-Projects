@@ -38,7 +38,3 @@ The goal is to **clean, explore, and visualize** the Netflix Movies & TV Shows d
 - Significant content growth observed after **2015**.
 - Most common rating is **TV-MA**.
 
-## 📸 Sample Visualizations
-*(Add screenshots of your charts here for better presentation)*
-
-## 📂 Project Structure
