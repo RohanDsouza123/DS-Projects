@@ -38,3 +38,37 @@ The goal is to **clean, explore, and visualize** the Netflix Movies & TV Shows d
 - Significant content growth observed after **2015**.
 - Most common rating is **TV-MA**.
 
+# 📊 Global Superstore Interactive Dashboard
+
+## 📌 Project Overview
+This project is part of my **7-Day Data Science Challenge (Day 2)** and focuses on building an **interactive sales dashboard** using the Global Superstore dataset.  
+The dashboard enables users to explore sales performance by category, region, and time period with interactive filters, charts, and KPIs.  
+It’s designed for business stakeholders to quickly identify trends, profitable segments, and areas needing improvement.
+
+---
+
+## 📂 Dataset
+- **Source:** [Global Superstore Dataset - Kaggle](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
+- **File Used:** `Sample - Superstore.csv`
+- **Description:** Contains order-level sales data including product category, sub-category, customer segment, region, shipping mode, sales, profit, and order date.
+
+---
+
+## 🛠 Tools & Libraries
+- **Python**
+- **Streamlit** – For building the interactive dashboard
+- **Plotly Express** – For creating interactive charts
+- **Pandas** – For data manipulation
+
+---
+
+## 📊 Dashboard Features
+- **Filters:** Year, Region, and Category
+- **KPIs:** Total Sales, Total Profit, Total Orders
+- **Visualizations:**
+  - Bar chart: Sales by Category
+  - Line chart: Monthly Sales Trend
+  - Pie chart: Profit Share by Segment
+  - Geo map: Sales by Country
+
+---
