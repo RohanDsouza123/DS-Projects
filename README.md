@@ -72,3 +72,5 @@ It’s designed for business stakeholders to quickly identify trends, profitable
   - Geo map: Sales by Country
 
 ---
+<img width="1094" height="493" alt="newplot (1)" src="https://github.com/user-attachments/assets/57edc2b7-661b-44f4-88da-cae23f6397a1" />
+
