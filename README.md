@@ -82,7 +82,7 @@ It’s designed for business stakeholders to quickly identify trends, profitable
 # 📊 Customer Churn Prediction  
 
 ## 📂 Dataset  
-- **Source**: Telecom customer churn dataset  
+- **Source**: [Telecom customer churn - Kaggle ](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 - **Type**: Binary classification  
 - **Features**: Customer demographics, account details, usage behavior  
 - **Target**: `Churn` → (0 = No, 1 = Yes)  
