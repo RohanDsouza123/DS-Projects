@@ -79,5 +79,79 @@ It’s designed for business stakeholders to quickly identify trends, profitable
 <img width="1094" height="493" alt="newplot (3)" src="https://github.com/user-attachments/assets/cca11299-de3a-4ad4-a20f-bb7cec86da91" />
 
 
+📊 Customer Churn Prediction — Day 3
+📂 Dataset
 
+Source: Telecom churn dataset
+
+Features: Customer demographics, account details, and service usage patterns
+
+Target: Churn (0 = Not churned, 1 = Churned)
+
+🛠 Tools & Libraries
+
+Python 3.9+
+
+Libraries:
+
+pandas, numpy → data wrangling
+
+scikit-learn → preprocessing, models, evaluation, GridSearchCV
+
+imblearn → SMOTE (handling class imbalance)
+
+xgboost → Gradient Boosted Trees
+
+matplotlib, seaborn → visualizations
+
+streamlit → deployment (interactive web app)
+
+🔄 Steps Performed
+1️⃣ Data Preprocessing
+
+Cleaned missing values & encoded categorical variables
+
+Train-test split
+
+Applied StandardScaler for feature scaling
+
+Applied SMOTE to balance churn vs non-churn classes
+
+2️⃣ Model Training & Hyperparameter Tuning
+
+Random Forest: GridSearchCV optimized n_estimators, max_depth, etc.
+
+Logistic Regression: Tuned C, penalty, solver
+
+XGBoost: Tuned learning_rate, max_depth, n_estimators, subsample
+
+3️⃣ Model Evaluation (Test Set Results)
+
+📌 Random Forest (Tuned) → Accuracy: 0.76 | Recall (Churn): 0.65
+
+📌 Logistic Regression (Tuned) → Accuracy: 0.73 | Recall (Churn): 0.69
+
+📌 XGBoost (Tuned) → Accuracy: 0.75 | Recall (Churn): 0.66
+
+4️⃣ Deployment Preparation
+
+Created a Streamlit app skeleton (app.py)
+
+Added input fields for customer data (ready for integration with trained model)
+
+Learned how to run:
+
+streamlit run app.py
+
+📌 Key Insights
+
+SMOTE improved detection of minority class (churn).
+
+Random Forest & XGBoost offered the best balance between precision and recall.
+
+Logistic Regression achieved the highest churn recall (69%), useful for customer retention strategies.
+
+XGBoost (tuned) showed the best cross-validation F1 (0.84) → strong candidate for deployment.
+
+Next Step → Build a full Streamlit app for churn prediction.
 
