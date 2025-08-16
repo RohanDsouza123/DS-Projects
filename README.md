@@ -79,79 +79,68 @@ It’s designed for business stakeholders to quickly identify trends, profitable
 <img width="1094" height="493" alt="newplot (3)" src="https://github.com/user-attachments/assets/cca11299-de3a-4ad4-a20f-bb7cec86da91" />
 
 
-📊 Customer Churn Prediction — Day 3
-📂 Dataset
+# 📊 Customer Churn Prediction  
 
-Source: Telecom churn dataset
+## 📂 Dataset  
+- **Source**: Telecom customer churn dataset  
+- **Type**: Binary classification  
+- **Features**: Customer demographics, account details, usage behavior  
+- **Target**: `Churn` → (0 = No, 1 = Yes)  
 
-Features: Customer demographics, account details, and service usage patterns
+---
 
-Target: Churn (0 = Not churned, 1 = Churned)
+## 🛠 Tools & Libraries  
+- **Python 3.9+**  
+- **Libraries**:  
+  - `pandas`, `numpy` → Data wrangling  
+  - `scikit-learn` → ML models, preprocessing, GridSearchCV  
+  - `imblearn` → SMOTE (class imbalance handling)  
+  - `xgboost` → Gradient Boosted Trees  
+  - `matplotlib`, `seaborn` → Visualizations  
+  - `streamlit` → Deployment (interactive web app)  
 
-🛠 Tools & Libraries
+---
 
-Python 3.9+
+## 🚀 Steps Performed  
 
-Libraries:
+### 🔹 Day 1 & Day 2 (Pre-Work Recap)  
+- Loaded and cleaned dataset.  
+- Handled missing values, encoded categorical variables.  
+- Performed **EDA** to understand class imbalance & feature impact.  
+- Split into **train/test** sets.  
 
-pandas, numpy → data wrangling
+### 🔹 Day 3 (Current Work)  
+1. **Data Balancing**:  
+   - Applied **SMOTE** to handle imbalanced target.  
 
-scikit-learn → preprocessing, models, evaluation, GridSearchCV
+2. **Model Training & Hyperparameter Tuning**:  
+   - **Random Forest** → Tuned `n_estimators`, `max_depth`, etc.  
+   - **Logistic Regression** → Tuned `C`, `penalty`, `solver`.  
+   - **XGBoost** → Tuned `learning_rate`, `max_depth`, `n_estimators`, `colsample_bytree`, `subsample`.  
 
-imblearn → SMOTE (handling class imbalance)
+3. **Evaluation**:  
+   - Compared models using **Accuracy, Precision, Recall, F1-score, Confusion Matrix**.  
 
-xgboost → Gradient Boosted Trees
+4. **Deployment Prep**:  
+   - Built a **Streamlit app skeleton** with customer input fields.  
+   - Prepared model integration for real-time predictions.  
 
-matplotlib, seaborn → visualizations
+---
 
-streamlit → deployment (interactive web app)
+## 📊 Model Performance (Day 3 Results)  
 
-🔄 Steps Performed
-1️⃣ Data Preprocessing
+| Model                  | Accuracy | Precision (Churn=1) | Recall (Churn=1) | F1-Score (Churn=1) |
+|------------------------|----------|----------------------|------------------|---------------------|
+| Random Forest (Tuned)  | 0.76     | 0.54                 | 0.65             | 0.59                |
+| Logistic Regression    | 0.73     | 0.50                 | 0.69             | 0.58                |
+| XGBoost (Tuned)        | 0.75     | 0.53                 | 0.66             | 0.59                |
 
-Cleaned missing values & encoded categorical variables
+---
 
-Train-test split
-
-Applied StandardScaler for feature scaling
-
-Applied SMOTE to balance churn vs non-churn classes
-
-2️⃣ Model Training & Hyperparameter Tuning
-
-Random Forest: GridSearchCV optimized n_estimators, max_depth, etc.
-
-Logistic Regression: Tuned C, penalty, solver
-
-XGBoost: Tuned learning_rate, max_depth, n_estimators, subsample
-
-3️⃣ Model Evaluation (Test Set Results)
-
-📌 Random Forest (Tuned) → Accuracy: 0.76 | Recall (Churn): 0.65
-
-📌 Logistic Regression (Tuned) → Accuracy: 0.73 | Recall (Churn): 0.69
-
-📌 XGBoost (Tuned) → Accuracy: 0.75 | Recall (Churn): 0.66
-
-4️⃣ Deployment Preparation
-
-Created a Streamlit app skeleton (app.py)
-
-Added input fields for customer data (ready for integration with trained model)
-
-Learned how to run:
-
-streamlit run app.py
-
-📌 Key Insights
-
-SMOTE improved detection of minority class (churn).
-
-Random Forest & XGBoost offered the best balance between precision and recall.
-
-Logistic Regression achieved the highest churn recall (69%), useful for customer retention strategies.
-
-XGBoost (tuned) showed the best cross-validation F1 (0.84) → strong candidate for deployment.
-
-Next Step → Build a full Streamlit app for churn prediction.
+## 📌 Key Insights  
+- **SMOTE** boosted recall for minority churn cases.  
+- **Random Forest & XGBoost** performed best overall (~0.75–0.76 accuracy).  
+- **Logistic Regression** achieved the **highest recall (0.69)** but lower accuracy.  
+- **XGBoost (Tuned)** showed the **best cross-validation F1 (0.84)** → best candidate for deployment.  
+- **Next Step** → Full deployment using **Streamlit** for interactive predictions.  
 
